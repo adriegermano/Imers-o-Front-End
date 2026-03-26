@@ -1,2 +1,2 @@
 # Imers-o-Front-End
-Repositório Relacionado ao Curso "Imersão Front-End" da Alura
+Repositório Relacionado ao Curso "Imersão Front-End com IA" da Alura
