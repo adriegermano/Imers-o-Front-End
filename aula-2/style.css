@@ -1,0 +1,150 @@
+/* Reset básico para remover margens e paddings padrão de todos os elementos */
+* {
+    /* Remove margem externa de todos os elementos */
+    margin: 0;
+    /* Remove preenchimento interno de todos os elementos */
+    padding: 0;
+    /* Inclui bordas e paddings no cálculo da largura e altura */
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    /* Define a cor de fundo como preto */
+    background-color: #000;
+    /* Define a cor do texto como branco */
+    color: #fff;
+    /* Define a família de fontes como Arial ou Helvetica */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define o layout como flexbox */
+    display: flex;
+    /* Organiza os itens em coluna */
+    flex-direction: column;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    justify-content: center;
+    /* Define a altura mínima como 100% da viewport */
+    min-height: 100vh;
+    /* Adiciona preenchimento interno de 20px */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    /* Centraliza o texto */
+    text-align: center;
+    /* Adiciona margem inferior de 40px */
+    margin-bottom: 40px;
+}
+
+header h1 {
+    /* Define o tamanho da fonte como 3rem */
+    font-size: 3rem;
+    /* Define o peso da fonte como normal */
+    font-weight: normal;
+}
+
+/* Main */
+main {
+    /* Define a largura como 100% */
+    width: 100%;
+    /* Define a largura máxima como 800px */
+    max-width: 800px;
+}
+
+/* Section */
+section {
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+section h2 {
+    /* Define o tamanho da fonte como 1.5rem */
+    font-size: 1.5rem;
+    /* Adiciona margem inferior de 30px */
+    margin-bottom: 30px;
+    /* Define a cor do texto como cinza claro */
+    color: #ccc;
+}
+
+/* Lista de perfis */
+.profiles {
+    /* Define o layout como flexbox */
+    display: flex;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Define o espaço entre os itens como 40px */
+    gap: 40px;
+    /* Remove o estilo de lista padrão */
+    list-style: none;
+    /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap;
+}
+
+.profile {
+    /* Define o layout como flexbox */
+    display: flex;
+    /* Organiza os itens em coluna */
+    flex-direction: column;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Define o cursor como ponteiro para indicar interatividade */
+    cursor: pointer;
+    /* Adiciona transição suave para transformações */
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    /* Aumenta o tamanho do elemento em 10% no hover */
+    transform: scale(1.1);
+}
+
+.profile img {
+    /* Define a largura como 120px */
+    width: 120px;
+    /* Define a altura como 120px */
+    height: 120px;
+    /* Torna a imagem circular */
+    border-radius: 50%;
+    /* Ajusta a imagem para cobrir o contêiner sem distorcer */
+    object-fit: cover;
+    /* Adiciona borda transparente de 3px */
+    border: 3px solid transparent;
+    /* Adiciona transição suave para a cor da borda */
+    transition: border-color 0.3s ease;
+}
+
+.profile:hover img {
+    /* Muda a cor da borda para vermelho no hover */
+    border-color: #e50914;
+}
+
+.profile span {
+    /* Adiciona margem superior de 10px */
+    margin-top: 10px;
+    /* Define o tamanho da fonte como 1.2rem */
+    font-size: 1.2rem;
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        /* Define o tamanho da fonte como 2rem em telas pequenas */
+        font-size: 2rem;
+    }
+
+    .profiles {
+        /* Define o espaço entre os itens como 20px em telas pequenas */
+        gap: 20px;
+    }
+
+    .profile img {
+        /* Define a largura como 100px em telas pequenas */
+        width: 100px;
+        /* Define a altura como 100px em telas pequenas */
+        height: 100px;
+    }
+}
